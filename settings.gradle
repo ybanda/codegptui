@@ -1,0 +1,2 @@
+rootProject.name = 'codegptui'
+include 'api', 'ui'

@@ -1,0 +1,29 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+/bin/**
+/api/bin/**
+
+# compiled output
+/ui/dist
+/ui/tmp
+/api/out-tsc
+
+
+# dependencies
+/api/node_modules
+
+.DS_Store
+Thumbs.db
+
+
