@@ -17,13 +17,8 @@
   <div>
     <mat-toolbar>
       <input matInput [value]="selectedFileNames.length ? selectedFileNames : 'Select Images'" />
+      <button type="button" class="btn btn-primary" (click)="uploadFiles()">Upload</button>
 
-      <button
-      mat-raised-button color="green"
-        (click)="uploadFiles()"
-      >
-        Upload
-      </button>
     </mat-toolbar>
 
     <input
