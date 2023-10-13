@@ -1,1 +1,1 @@
-export const CODE_GPT_GET_COMPANY_INFO = "codeGPT/getCompanyInfo";
+export const CODE_GPT_GET_COMPANY_INFO = "/codeGPT/getCompanyInfo";
