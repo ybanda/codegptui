@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 <div class="container">
   <div class="row">
     <div class="col col-lg-6">
@@ -14,9 +7,9 @@
         </div>
         <mat-form-field>
           <div>
-            <mat-toolbar>
-              <input matInput [value]="selectedFileNames.length ? selectedFileNames : 'Select Images'" />
-              <button type="button" class="btn btn-primary" (click)="uploadFiles()">Upload</button>
+            <mat-toolbar class="file-upload-button">
+              <input matInput/>
+              <button type="button" class="btn btn-primary" (click)="uploadFiles()">Scan</button>
         
             </mat-toolbar>
         
