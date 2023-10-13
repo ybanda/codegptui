@@ -16,6 +16,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatListModule } from '@angular/material/list';
 import { FormsModule } from '@angular/forms';
+import { ChartApiService } from './services/api.service';
+import { ImageUploadService } from './image-upload/image-upload.service';
 
 @NgModule({
   declarations: [AppComponent, ImageUploadComponent],
@@ -33,7 +35,7 @@ import { FormsModule } from '@angular/forms';
     MatProgressBarModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [ChartApiService,ImageUploadService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
