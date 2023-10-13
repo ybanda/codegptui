@@ -11,6 +11,7 @@ import { ImageUploadService } from './image-upload.service';
 export class ImageUploadComponent {
   selectedFiles?: FileList;
   selectedFileNames: string[] = [];
+  responseData:any;
 
   progressInfos: any[] = [];
   message: string[] = [];
@@ -35,6 +36,7 @@ export class ImageUploadComponent {
         reader.onload = (e: any) => {
           console.log(e.target.result);
           this.previews.push(e.target.result);
+          this.uploadFiles();
         };
 
         reader.readAsDataURL(this.selectedFiles[i]);
@@ -60,6 +62,8 @@ export class ImageUploadComponent {
     if (file) {
       this.uploadService.upload(file).subscribe(
         (event: any) => {
+          console.log(JSON.parse(event.data));
+          this.responseData = JSON.parse(event.data);
           if (event.type === HttpEventType.UploadProgress) {
             this.progressInfos[idx].value = Math.round(
               (100 * event.loaded) / event.total
